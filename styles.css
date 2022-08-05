@@ -130,16 +130,20 @@
 .extra {
     position: relative;
     top: 0;
-    left: 0;
-    width: 100%;
+    width: 0;
+    width: 400px;
     height: 100%;
     background: var(--black);
     opacity: 0;
+    transform: translateX(440px);
 }
 
 .extra.active {
+    top: 0;
+    right: 0;
     opacity: 1;
     z-index: 1000;
+    transition: .5s;
 }
 
 .extra #close-extra {
@@ -149,7 +153,7 @@
     top: 0;
     right: 0;
     margin: 40px 40px 0 0;
-    cursor: pointer;
+    cursor: pointer;    
 }
 
 .extra #close-extra::before {
@@ -168,4 +172,16 @@
     height: 3px;
     background: var(--white);
     transform: translateY(12px) rotate(-45deg);
+}
+
+.extra #title {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    color: var(--white);
 }

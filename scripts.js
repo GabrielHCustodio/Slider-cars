@@ -1,6 +1,5 @@
 const dots = document.querySelectorAll('.dot');
 const boxes = document.querySelectorAll('.container-box')
-const openExtra = document.querySelector('#open-extra')
 const closeExtra = document.querySelector('#close-extra')
 const extra = document.querySelector('.extra')
 
@@ -23,13 +22,27 @@ for(let i = 0; i < dots.length; i++) {
 }
 
 // Extra information
+function setExtra(i) {
+    extra.classList.add('active')
+    const title = document.getElementById('title')
 
-function moreInfo() {
-    openExtra.addEventListener('click', () => {
-        extra.classList.add('active')
-    })
-    closeExtra.addEventListener('click', () => {
-        extra.classList.remove('active')
+    if(i === 0) {
+        title.innerHTML = "Corvette"
+    }else if(i === 1) {
+        title.innerHTML = "Camaro"
+    }else if(i === 2) {
+        title.innerHTML = "Lamborguini Aventador"
+    }else if(i === 3) {
+        title.innerHTML = "Bugatti Chiron"
+    }else if(i === 4) {
+        title.innerHTML = "Dodge Challenger"
+    }
+
+    closeExtra.addEventListener('click', () => { extra.classList.remove('active')})
+}
+
+for(let i = 0; i < boxes.length; i++) {
+    boxes[i].addEventListener('click', function() {
+        setExtra(i)
     })
 }
-moreInfo()
