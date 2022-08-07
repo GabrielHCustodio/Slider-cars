@@ -154,6 +154,7 @@
     right: 0;
     margin: 40px 40px 0 0;
     cursor: pointer;    
+    z-index: 10;
 }
 
 .extra #close-extra::before {
@@ -174,14 +175,16 @@
     transform: translateY(12px) rotate(-45deg);
 }
 
-.extra #title {
-    position: fixed;
+.extra #info {
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     height: 100%;
     width: 100%;
     top: 0;
     left: 0;
     color: var(--white);
 }
+
