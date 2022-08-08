@@ -1,5 +1,5 @@
 const dots = document.querySelectorAll('.dot');
-const boxes = document.querySelectorAll('.container-box')
+const boxes = document.querySelectorAll('.box')
 const closeExtra = document.querySelector('#close-extra')
 const extra = document.querySelector('.extra')
 
