@@ -54,9 +54,9 @@
     background-size: cover;
     background-position: center;
     border-radius: 20px;
+    top: 10%;
     opacity: 0;
     transition: .5s;
-    z-index: 999;
 }
 
 .box:first-child {
@@ -97,8 +97,7 @@
     padding: 5px 0;
     cursor: pointer;
     transition: .5s;
-    z-index: 1000;
-    pointer-events: none;
+    z-index: 999;
 }
 
 .box .information:hover {
