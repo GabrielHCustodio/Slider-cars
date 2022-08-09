@@ -54,7 +54,6 @@
     background-size: cover;
     background-position: center;
     border-radius: 20px;
-    top: 10%;
     opacity: 0;
     transition: .5s;
     z-index: 999;
