@@ -2,6 +2,8 @@ const dots = document.querySelectorAll('.dot');
 const boxes = document.querySelectorAll('.box')
 const closeExtra = document.querySelector('#close-extra')
 const extra = document.querySelector('.extra')
+const containerInfo = document.querySelector('.container-info')
+const containerBoxes = document.querySelector('.container-boxes')
 
 //Slider
 function setActive(i) {
@@ -24,6 +26,7 @@ for(let i = 0; i < dots.length; i++) {
 // Extra information
 function setExtra(i) {
     extra.classList.add('active')
+    
     const info = document.getElementById('info')
 
     if(i === 0) {
@@ -68,11 +71,17 @@ function setExtra(i) {
                          `   
     }
 
-    closeExtra.addEventListener('click', () => { extra.classList.remove('active')})
+    closeExtra.addEventListener('click', () => { 
+        extra.classList.remove('active')
+        containerInfo.classList.add('display-info')
+        containerBoxes.classList.add('display-box')
+    })
 }
 
 for(let i = 0; i < boxes.length; i++) {
     boxes[i].addEventListener('click', function() {
         setExtra(i)
+        containerInfo.classList.remove('display-info')
+        containerBoxes.classList.remove('display-box')
     })
 }
